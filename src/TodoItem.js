@@ -7,6 +7,7 @@ export const TodoItem = (props) => {
 
     return (
         <li className={`todo ${props.completed ? 'completed' : ''}`}>
+            <span className='todo--date'>{new Date(props.id).toLocaleString()}</span>
             <label>
                 <input
                     type="checkbox"
@@ -19,15 +20,15 @@ export const TodoItem = (props) => {
                         })
                     }}
                 />
-                <span>{props.title}</span>
+                <span>{props.title} </span>
                 <i
                     className="material-icons red-text"
                     onClick={() => {
                         dispatch({
-                        type: 'remove',
-                        payload: props.id,
-                    })
-                }}
+                            type: 'remove',
+                            payload: props.id,
+                        })
+                    }}
                 >
                     delete
                 </i>

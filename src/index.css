@@ -12,6 +12,11 @@ body {
   text-decoration: line-through;
 }
 
+li{
+  background: #f3f3f3;
+  padding: 5px;
+}
+
 .todo label {
   width: 100%;
   display: flex;
@@ -19,11 +24,22 @@ body {
   justify-content: space-between;
   cursor: pointer;
   background: #f3f3f3;
-  padding: 1rem;
+  padding: 10px;
 }
 
 .todo i {
   z-index: 2;
+}
+
+.todo--title{
+  display: flex;
+  flex-direction: column;
+}
+
+.todo--date{
+  font-size: 10px;
+  color: #000;
+  height: 20px;
 }
 
 .btns{
