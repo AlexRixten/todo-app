@@ -9,6 +9,13 @@ export default function (state, action) {
                     completed: false,
                 }
             ]
+        case 'edit':
+            return state.map(todo => {
+                if (todo.id === action.id) {
+                    todo.title = action.payload
+                }
+                return todo
+            })
         case 'toggle':
             return state.map(todo => {
                 if (todo.id === action.payload) {
