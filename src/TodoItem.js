@@ -15,7 +15,10 @@ export const TodoItem = (props) => {
         <label style={{ display: 'flex', alignItems: 'flex-start', flexDirection: 'column' }}>
             <input className="todo-text" type="text" value={newName} onChange={handleChange} />
             <div>
-                <i className="material-icons red-text" onClick={() => setEditing(false)}>close</i>
+                <i className="material-icons red-text" onClick={() => {
+                    setEditing(false)
+                    setNewName(props.title)
+                }}>close</i>
                 <i
                     className="material-icons green-text"
                     onClick={() => {
